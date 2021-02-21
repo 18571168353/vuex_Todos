@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+// #1
+import Antd from 'ant-design-vue'
+// #2
+import 'ant-design-vue/dist/antd.css'
+import store from './store/index'
 
 Vue.config.productionTip = false
 
+// #3
+Vue.use(Antd)
+
 new Vue({
-  store,
-  render: h => h(App)
+  render: h => h(App),
+  store
 }).$mount('#app')
